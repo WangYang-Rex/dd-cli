@@ -1,0 +1,14 @@
+{
+    "name": "<%- name %>",
+    "options": {
+        "type": "salt",
+        "template": "<%- template %>",
+        "npm": "<%- npm %>",
+        "vars": {
+            "__LOCAL__": true
+        },
+        "buildvars": {
+            "__LOCAL__": [ false ]
+        }
+    }
+}
