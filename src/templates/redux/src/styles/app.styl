@@ -1,0 +1,270 @@
+// 全局样式文件
+body
+    font-size 14px
+    color #333
+    background-color #eee
+    
+.main
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+
+.main-content
+    background-color: #E7E8EB
+    position: relative
+    .contentWrap
+        margin: 10px
+        position: relative
+        // background: #fff
+    .containerheader
+        display block
+        height: 50px
+        background: #ffffff
+        padding: 0 20px;
+        .headerName
+            height: 50px
+            font-size: 16px
+            line-height: @height
+            color:#545454
+            display: inline-block
+        .headRight
+            height: 50px
+            line-height: @height
+            float: right
+            text-align: right
+            .ant-btn
+                margin-left: 10px
+            // margin-top: 14px
+            // margin-left: 20px
+            // display: inline-block
+//.t-FBH .t-FBAC .t-FBJC的组合，垂直水平居中
+.center
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+img
+    max-width: 100%
+
+.t-BGF
+    background-color: #ffffff
+.t-BGC
+    background-color: #cccccc
+.t-R50
+    -webkit-border-radius: 50%;
+    border-radius: 50%
+
+.ant-pagination 
+    text-align: right
+.dd-table
+    background-color: #fff;
+    .dd-t-header
+        height: 49px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        padding: 0px 33px 0px 305px;
+        border : 1px solid #d6e2ed;
+    .column-shadow
+        box-shadow: 0 2px 6px 1px rgba(0,0,0,.075);
+    .dd-t-header-filter
+        height: 100px
+        .right-top
+            overflow-y: hidden;
+            overflow-x: auto;
+            .tb-b-i
+                height:150px
+                table
+                    width:3000px
+    .dd-t-main
+        min-height: 50px;
+        position: relative;
+        z-index: 1;
+        height: 325px;
+        .main-scroll
+            width: 100%;
+            height: 100%;
+            position: relative
+        .ui-scrollbar
+            padding: 0 !important;
+            padding: 0!important;
+            .scroll-content
+                border: none!important;
+                box-sizing: content-box!important;
+                height: auto;
+                left: 0!important;
+                margin: 0;
+                max-height: none!important;
+                max-width: none!important;
+                padding: 0;
+                position: relative!important;
+                top: 0!important;
+                width: auto!important;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                height: 325px;
+                .main-con
+                    .tb-b
+                        overflow: scroll!important;
+                        height: 300px
+                        padding-left 305px
+            .scroll-y
+                width: 10px!important;
+                height: auto!important;
+                right: 0!important;
+                bottom: 0!important;
+            .scroll-x
+                width: auto!important;
+                height: 10px!important;
+                bottom: 0!important;
+                left: 16px;
+                right: 16px;
+            .scroll-element
+                box-sizing: content-box;
+                border: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                z-index: 3;
+                div
+                    display: block;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    position: absolute;
+                .scroll-element_outer
+                    overflow: hidden;
+                .scroll-element_track
+                    opacity: 1!important;
+                    background-color: #dfe3e8!important;
+                .scroll-bar
+                    background-color: #c4cdd5!important;
+                    opacity: 1!important;
+                    width: 700px
+
+
+    .fix-start-b
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        border-right: 1px solid #d6e2ed;
+        z-index: 4;
+        width: 305px
+        background: #ffffff
+    .column-shadow
+        box-shadow: 2px -1px 5px 1px rgba(0,0,0,.075);
+
+    .w_3000
+        width:3000px
+
+    .h_500
+        height: 500px
+    .h_50
+        height: 50px
+
+    th
+        line-height: 50px;
+        // height: 50px
+        vertical-align: top;
+        word-wrap: break-word;
+        border: 1px solid #d6e2ed;
+    td
+        line-height: 50px;
+        height: 50px
+    .left-bottom-wrap
+        overflow-y: hidden
+        height: 285px
+
+
+.t-FBH,
+.t-FBV {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.t-FBV {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.t-FBAS {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.t-FBAC {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.t-FBAE {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.t-FBJS {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.t-FBJC {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.t-FBJE {
+  -webkit-box-pack: end /*å¾…éªŒè¯ æ˜¯å¦è¦åˆ é™¤*/;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.t-FBJ {
+  -webkit-box-pack: justify /*å¾…éªŒè¯ æ˜¯å¦è¦åˆ é™¤*/;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.t-FBH > .t-FB1,
+.t-FBH > .t-FB2,
+.t-FBH > .t-FB3 {
+  width: 0;
+}
+.t-FB1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.t-FB2 {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+}
+.t-FB3 {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+}
+.t-CL:after,
+.t-clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.t-FL {
+  float: left;
+}
+.t-FR {
+  float: right;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import './<%- Name %>.styl';
+import './Abc.styl';
 import {
     message
 } from 'antd';
 
-class <%- Name %> extends React.Component {
+class Abc extends React.Component {
 
 	constructor(props) {
         super(props);
@@ -14,8 +14,8 @@ class <%- Name %> extends React.Component {
 
 	render() {
 		return (
-			<div className="<%= name %>">
-                component <%= name %>
+			<div className="abc">
+                component abc
             </div>
 		);
     }
@@ -31,4 +31,4 @@ class <%- Name %> extends React.Component {
     componentWillUnmount() {}
 }
 
-export default <%- Name %>;
+export default Abc;
