@@ -61,13 +61,9 @@ var util = {
                     validate: function(name) {
                         return /^\w[\w\-\.]*\w$/.test(name) ? true : 'name is not valid';
                     }
-                }, {
-                    name: 'store',
-                    type: 'confirm',
-                    message: 'Generate store & actions?'
                 }
             ]
-        } else if(type == 'proj') {
+        } else if(type == 'redux') {
             return [
                 {
                     name: 'name',
@@ -91,9 +87,6 @@ var util = {
                     validate: function(version) {
                         return /^\d+\.\d+\.\d+([\.\-\w])*$/.test(version) ? true : 'version is not valid';
                     }
-                }, {
-                    name: 'homepage',
-                    message: 'Project homepage'
                 }, {
                     name: 'repository',
                     message: 'Project repository',

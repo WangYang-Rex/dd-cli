@@ -2,25 +2,26 @@
 react + reflux + webpack脚手架
 https://github.com/WangYang-Rex/dd-cli
 
-## 安装
+## install
 ```js
-cnpm install -g dd-cli
+sudo npm install -g dd-cli
 ```
-## 初始化项目
+
+## generator react-redux-saga-antd project
 ```js
-dd init proj
+dd init redux
 cnpm install
 ```
 
-## 初始化页面
+## generator page
 ```js
 dd init page
 ```
 
-## 初始化模块
+## generator component
 ```js
 dd init mod
 ```
-## 后续
-项目打包和启本地服务正在开发中...
+## other
+local server & build is developing
 
