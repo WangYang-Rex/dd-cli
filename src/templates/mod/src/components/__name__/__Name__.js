@@ -1,8 +1,5 @@
 import React from 'react';
 import './<%- Name %>.styl';
-import {
-    message
-} from 'antd';
 
 class <%- Name %> extends React.Component {
 

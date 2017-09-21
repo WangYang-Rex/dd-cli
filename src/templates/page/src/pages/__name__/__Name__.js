@@ -4,9 +4,6 @@ import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as Act from 'actions';
 import './<%- Name %>.styl';
-import {
-    message
-} from 'antd';
 
 class <%- Name %> extends React.Component {
 
