@@ -19,17 +19,15 @@ class <%- Name %> extends React.Component {
             </div>
 		);
     }
+    
     componentWillMount() {
 		// this.props.dispatch({
 		// 	type: Act.GET_DEPT_LIST
 		// });
     }
-
     componentDidMount() {}
     componentWillReceiveProps(nextProps) {}
-    shouldComponentUpdate(nextProps, nextState) {
-        return true;
-    }
+    shouldComponentUpdate(nextProps, nextState) { return true; }
     componentWillUpdate(nextProps, nextState) {}
     componentDidUpdate(prevProps, prevState) {}
     componentWillUnmount() {}

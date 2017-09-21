@@ -1,1 +1,1 @@
-module.exports = require('./Page<%- Name %>');
+module.exports = require('./<%- Name %>');

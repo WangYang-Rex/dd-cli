@@ -20,9 +20,7 @@ class <%- Name %> extends React.Component {
     componentWillMount() {}
     componentDidMount() {}
     componentWillReceiveProps(nextProps) {}
-    shouldComponentUpdate(nextProps, nextState) {
-        return true;
-    }
+    shouldComponentUpdate(nextProps, nextState) { return true; }
     componentWillUpdate(nextProps, nextState) {}
     componentDidUpdate(prevProps, prevState) {}
     componentWillUnmount() {}
