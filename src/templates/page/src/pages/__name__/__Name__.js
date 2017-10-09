@@ -8,29 +8,29 @@ import './<%- Name %>.styl';
 class <%- Name %> extends React.Component {
 
 	constructor(props) {
-        super(props);
-        this.state = {
-        };
-    }
+    super(props);
+    this.state = {
+    };
+  }
 	render() {
 		return (
 			<div className="<%= name %>">
-                page <%= name %>
-            </div>
+        page <%= name %>
+      </div>
 		);
-    }
+  }
     
-    componentWillMount() {
-		// this.props.dispatch({
-		// 	type: Act.GET_DEPT_LIST
-		// });
-    }
-    componentDidMount() {}
-    componentWillReceiveProps(nextProps) {}
-    shouldComponentUpdate(nextProps, nextState) { return true; }
-    componentWillUpdate(nextProps, nextState) {}
-    componentDidUpdate(prevProps, prevState) {}
-    componentWillUnmount() {}
+  componentWillMount() {
+  // this.props.dispatch({
+  // 	type: Act.GET_DEPT_LIST
+  // });
+  }
+  componentDidMount() {}
+  componentWillReceiveProps(nextProps) {}
+  shouldComponentUpdate(nextProps, nextState) { return true; }
+  componentWillUpdate(nextProps, nextState) {}
+  componentDidUpdate(prevProps, prevState) {}
+  componentWillUnmount() {}
 }
 
 // Uncomment properties you need
@@ -42,9 +42,9 @@ const mapStateToProps = state => {
 	}
 }
 function mapDispatchToProps(dispatch) {
-    // const actions = {};
-    // const actionMap = { actions: bindActionCreators(actions, dispatch) };
-    // return actionMap;
-    return {}
-  }
+  // const actions = {};
+  // const actionMap = { actions: bindActionCreators(actions, dispatch) };
+  // return actionMap;
+  return {}
+}
 export default connect(mapStateToProps)(<%- Name %>);
