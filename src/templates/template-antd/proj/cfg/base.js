@@ -36,6 +36,7 @@ module.exports = {
       stores: `${defaultSettings.srcPath}/stores/`,
       styles: `${defaultSettings.srcPath}/styles/`,
       config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
+      lib: `${defaultSettings.srcPath}/lib/`,
       util: `${defaultSettings.srcPath}/lib/util.js`,
       server: `${defaultSettings.srcPath}/lib/server`,
       dingApi: `${defaultSettings.srcPath}/lib/dingApi.js`,

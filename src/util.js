@@ -66,6 +66,20 @@ var util = {
         } else if(type == 'redux') {
             return [
                 {
+                    name: 'ui',
+                    message: 'Please choose react stack? antd or antd-mobile',
+                    default: path.basename(process.cwd()),
+                    validate: function(name) {
+                        if(name == 'antd'){
+                            return true;
+                        } else if(name == 'antd-mobile'){
+                            return true;
+                        } else {
+                            return 'ui is not valid';
+                        }
+                    }
+                },
+                {
                     name: 'name',
                     message: 'Project name',
                     default: path.basename(process.cwd()),

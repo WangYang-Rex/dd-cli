@@ -1,0 +1,9 @@
+{
+    "template": "template-antd",
+    "description": "react-redux-saga-antd",
+    "flow": "redux",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WangYang-Rex/react-redux-saga-antd"
+    }
+}

@@ -9,8 +9,7 @@ import {
 	callTakeEvery,
 	callTakeLatest
 } from 'util';
-import * as Fetch from '../lib/server';
-import {message} from 'antd';
+import * as Fetch from 'lib/server';
 
 let getUserList = function* () {
 	yield callTakeEvery(Act.GET_USER_LIST, function*(action){

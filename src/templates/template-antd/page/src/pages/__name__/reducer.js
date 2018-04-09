@@ -8,9 +8,9 @@ const initState = {
 export default function <%= name %>(state = initState, action) {
   switch(action.type) {
     // case Act.SET_USER_LIST:
-    //     return Object.assign({}, state, {
-    //         user_list: action.user_list
-    //     });
+    //   return Object.assign({}, state, {
+    //     user_list: action.user_list
+    //   });
     default:
       return state;
   }

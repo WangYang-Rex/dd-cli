@@ -21,6 +21,10 @@ let config = Object.assign({}, baseConfig, {
     new webpack.NoErrorsPlugin(),
     new BowerWebpackPlugin({
       searchResolveModulesDirectories: false
+    }),
+    //以下添加了__LOCAL__变量，代码中可以判断这个来判断是否本地开发
+    new webpack.DefinePlugin({
+      '__LOCAL__': true
     })
   ],
   module: defaultSettings.getDefaultModules()
