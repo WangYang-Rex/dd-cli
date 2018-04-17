@@ -6,6 +6,18 @@ const inquirer = require('inquirer');
 const pkg = require('../package.json');
 const util = require('./util')
 
+var targetDir = process.cwd();
+var ddDir = path.join(targetDir, 'ddc.json');
+console.log(ddDir);
+var ddConfig;
+try {
+  ddConfig = require(ddDir);
+} catch (e) {
+  ddConfig = {
+    aa: 'bb'
+  }
+}
+console.log(ddConfig)
 //projs
 const templates = {
   'redux': ['antd', 'antd-mobile'],
@@ -19,10 +31,10 @@ program
 program
   .command('init <type>')
   .description('init proj/page/mod to generator proj/page/mod')
-  .action(function(type, command) {
+  .action(function (type, command) {
     console.log('\nWelcome to react project generator!\n');
     let prompts = util.prompt(type);
-    if(!prompts){
+    if (!prompts) {
       console.log(`\n${type} is not known, please use proj/page/mod\n`);
       return
     }
@@ -36,5 +48,3 @@ program
 
 program
   .parse(process.argv);
-
-

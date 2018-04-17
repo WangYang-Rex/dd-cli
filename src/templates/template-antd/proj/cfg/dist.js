@@ -12,7 +12,7 @@ let BowerWebpackPlugin = require('bower-webpack-plugin');
 let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   output: {
-    path: path.join(__dirname, '../../crm-release/pc/assets'),
+    path: path.join(__dirname, '../dist'),
     filename: 'app.js',
     publicPath: defaultSettings.publicPath
   },
