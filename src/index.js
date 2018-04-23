@@ -6,24 +6,36 @@ const inquirer = require('inquirer');
 const pkg = require('../package.json');
 const util = require('./util')
 
-var targetDir = process.cwd();
-var ddDir = path.join(targetDir, 'ddc.json');
-console.log(ddDir);
+//读取 ddConfig
 var ddConfig;
 try {
-  ddConfig = require(ddDir);
+  ddConfig = require(path.join(process.cwd(), 'dd.json'));
 } catch (e) {
-  ddConfig = {
-    aa: 'bb'
-  }
-}
-console.log(ddConfig)
-//projs
-const templates = {
-  'redux': ['antd', 'antd-mobile'],
-  'reflux': ['salt', 'uxcore']
 }
 
+
+// 处理 Init
+var handleInit = function (type, template) {
+  console.log(type, template);
+  //读取对应 template 配置
+  var templateDir = path.join(__dirname, 'templates', template);
+  var templateUtil = require(templateDir);
+
+  let prompts = templateUtil.prompt(type);
+  if (!prompts) {
+    console.log(`\n${type} is not known\n`);
+    console.log(templateUtil.typeErrorMessage);
+    return
+  }
+  inquirer.prompt(prompts).then(function (answers) {
+    var sourceDir = path.join(__dirname, 'templates', template);
+    var targetDir = process.cwd();
+    answers = templateUtil.answersFormat(answers)
+    templateUtil.makeFiles(sourceDir, targetDir, answers, util.filter(type));
+  });
+}
+
+// 注册command命令
 program
   .allowUnknownOption()
   .version(pkg.version)
@@ -33,18 +45,22 @@ program
   .description('init proj/page/mod to generator proj/page/mod')
   .action(function (type, command) {
     console.log('\nWelcome to react project generator!\n');
-    let prompts = util.prompt(type);
-    if (!prompts) {
-      console.log(`\n${type} is not known, please use proj/page/mod\n`);
-      return
+    if (type == 'proj') {
+      //选择模板类型  从对应模板中读取配置文件
+      var prompts = util.prompt('template');
+      inquirer.prompt(prompts).then(function (answers) {
+        handleInit(type, answers.template);
+      });
+    } else {
+      //获取dd.json, 读取对应的template
+      if(ddConfig && ddConfig.template){
+        handleInit(type, ddConfig.template);
+      } else {
+        console.log('dd.json is not exist! Please use `dd init proj` to generator project');
+      }
     }
-    inquirer.prompt(prompts).then(function (answers) {
-      var sourceDir = path.join(__dirname, 'templates', type);
-      var targetDir = process.cwd();
-      answers = util.answersFormat(answers)
-      util.makeFiles(sourceDir, targetDir, answers, util.filter(type));
-    });
   })
 
 program
   .parse(process.argv);
+

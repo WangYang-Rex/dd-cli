@@ -5,6 +5,7 @@ var ejs = require('ejs')
 var mkdirp = require('mkdirp');
 
 var util = {
+	typeErrorMessage: `\nplease use proj/page/mod \n`,
 	// 复制文件
 	makeFiles: function (sourceDir, targetDir, data, filter) {
 		console.log('\nStart to copy files ...\n')
@@ -41,6 +42,13 @@ var util = {
 			}
 		})
 	},
+	checkInitType: function(type){
+		let types = []
+		if(!type || types.indexOf(type)<0){
+			console.log(`\n${type} is not known, please use ${types.join('/')}\n`);
+			return false;
+		}
+	},
 	//inquirer
 	prompt: function (type) {
 		if (type == 'mod') {
@@ -63,22 +71,22 @@ var util = {
 					}
 				}
 			]
-		} else if (type == 'redux') {
+		} else if (type == 'template') {
+			return [{
+        type: 'list',
+        name: 'template',
+        message: 'What template do you need?',
+        choices: [
+					'react-redux-antd',
+					'react-redux-antd-mobile',
+					'react-reflux'
+				],
+        filter: function (val) {
+          return val.toLowerCase();
+        }
+      }]
+		} else if (type == 'proj') {
 			return [
-				{
-					name: 'ui',
-					message: 'Please choose react stack? antd or antd-mobile',
-					default: path.basename(process.cwd()),
-					validate: function (name) {
-						if (name == 'antd') {
-							return true;
-						} else if (name == 'antd-mobile') {
-							return true;
-						} else {
-							return 'ui is not valid';
-						}
-					}
-				},
 				{
 					name: 'name',
 					message: 'Project name',
