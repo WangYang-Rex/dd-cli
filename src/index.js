@@ -16,7 +16,6 @@ try {
 
 // 处理 Init
 var handleInit = function (type, template) {
-  console.log(type, template);
   //读取对应 template 配置
   var templateDir = path.join(__dirname, 'templates', template);
   var templateUtil = require(templateDir);
@@ -28,7 +27,8 @@ var handleInit = function (type, template) {
     return
   }
   inquirer.prompt(prompts).then(function (answers) {
-    var sourceDir = path.join(__dirname, 'templates', template);
+    var sourceDir = path.join(templateDir, type);
+    console.log('sourceDir', sourceDir);
     var targetDir = process.cwd();
     answers = templateUtil.answersFormat(answers)
     templateUtil.makeFiles(sourceDir, targetDir, answers, util.filter(type));

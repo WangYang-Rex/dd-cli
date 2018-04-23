@@ -1,6 +1,6 @@
 {
 	"template": "template-antd",
-	"description": "react-redux-saga-antd",
+	"description": "react-redux-antd",
 	"flow": "redux",
 	"repository": {
 		"type": "git",
