@@ -1,9 +1,8 @@
 # dd-cli
 react + reflux + webpack脚手架
-https://github.com/WangYang-Rex/dd-cli
 
 ## tempalte
-redux https://github.com/WangYang-Rex/react-redux-saga-antd
+react-redux-antd
 
 ## install
 ```js
