@@ -18,7 +18,6 @@ var util = {
 			if (filter && !filter(source, data)) {
 				return
 			}
-			// console.log(source)
 
 			// 真实文件路径
 			var src = source;
@@ -150,6 +149,7 @@ function writeFile(source, target, data) {
 		console.log('Generate file ' + path.relative(process.cwd(), target));
 		var tpl = fs.readFileSync(source);
 		var content;
+		console.log(tpl.toString(), data);
 		try {
 			content = ejs.render(tpl.toString(), data);
 		} catch (e) {

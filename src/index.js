@@ -13,7 +13,6 @@ try {
 } catch (e) {
 }
 
-
 // 处理 Init
 var handleInit = function (type, template) {
   //读取对应 template 配置

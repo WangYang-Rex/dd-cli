@@ -1,6 +1,6 @@
 {
   "name": "dd-cli",
-  "version": "3.0.2",
+  "version": "3.0.4",
   "description": "dd-cli commander, project generator",
   "main": "index.js",
   "engines": {

@@ -1,10 +1,8 @@
 
 import React from 'react';
-<% if (store) { %>
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as Act from 'actions';
-<% } %>
 import './<%- Name %>.styl';
 
 class <%- Name %> extends React.Component {
@@ -35,22 +33,18 @@ class <%- Name %> extends React.Component {
   componentWillUnmount() {}
 }
 
-<% if (store) { %>
 // Uncomment properties you need
 // PersonmanageComponent.propTypes = {};
 // PersonmanageComponent.defaultProps = {};
 
+const mapStateToProps = state => {
+	return {
+	}
+}
 function mapDispatchToProps(dispatch) {
   // const actions = {};
   // const actionMap = { actions: bindActionCreators(actions, dispatch) };
   // return actionMap;
   return {}
 }
-const mapStateToProps = state => {
-	return {
-	}
-}
 export default connect(mapStateToProps)(<%- Name %>);
-<% } else { %>
-export default <%- Name %>;
-<% } %>
