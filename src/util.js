@@ -149,7 +149,6 @@ function writeFile(source, target, data) {
 		console.log('Generate file ' + path.relative(process.cwd(), target));
 		var tpl = fs.readFileSync(source);
 		var content;
-		console.log(tpl.toString(), data);
 		try {
 			content = ejs.render(tpl.toString(), data);
 		} catch (e) {
