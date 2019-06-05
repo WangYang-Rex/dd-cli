@@ -76,6 +76,7 @@ var util = {
         name: 'template',
         message: 'What template do you need?',
         choices: [
+					'webpack4-react',
 					'react-redux-antd',
 					'react-redux-antd-mobile',
 					'react-reflux'
